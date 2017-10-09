@@ -1,0 +1,14 @@
+<resources>
+    <string name="choose_language">Выберите язык</string>
+    <string-array name="language_list">
+        <item>Английский</item>
+        <item>Русский</item>
+        <item>Украинский</item>
+    </string-array>
+    <string name="button_forward">Войти</string>
+    <string-array name="menu_list">
+        <item>Создать уведомление</item>
+        <item>Удалить все</item>
+        <item>Выход</item>
+    </string-array>
+</resources>
