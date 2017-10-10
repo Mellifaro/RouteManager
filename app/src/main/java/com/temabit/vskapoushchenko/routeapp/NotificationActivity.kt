@@ -53,11 +53,11 @@ class NotificationActivity : AppCompatActivity(),
         recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
         recyclerView.adapter = adapter
-        recyclerView.addOnItemTouchListener(NotificationTochListener())
+        recyclerView.addOnItemTouchListener(NotificationTouchListener())
     }
 
 
-    inner class NotificationTochListener : RecyclerView.OnItemTouchListener{
+    inner class NotificationTouchListener : RecyclerView.OnItemTouchListener{
         override fun onTouchEvent(rv: RecyclerView?, e: MotionEvent?) {
         }
 
@@ -95,8 +95,8 @@ class NotificationActivity : AppCompatActivity(),
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.notification, menu)
-        return true
+        menuInflater.inflate(R.menu.menu, menu)
+        return false
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -146,7 +146,7 @@ class NotificationActivity : AppCompatActivity(),
                         " помогают ускорить процесс.",
                         Date(System.currentTimeMillis()), NotificationType.ADVERTISEMENT_NOTIFICATION),
 
-                NotificationEntity(3, "This notification is used when a new ticket is created in any of the categories",
+                NotificationEntity(3, "This menu is used when a new ticket is created in any of the categories",
                         Date(System.currentTimeMillis()), NotificationType.SERVICE_NOTIFICATION))
     }
 }

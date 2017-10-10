@@ -4,6 +4,6 @@ package com.temabit.vskapoushchenko.routeapp.entities
  * Created by v.skapoushchenko on 05.10.2017.
  */
 enum class NotificationType(val title: String) {
-    ADVERTISEMENT_NOTIFICATION("Advertisement notification"),
-    SERVICE_NOTIFICATION("Service notification")
+    ADVERTISEMENT_NOTIFICATION("Advertisement menu"),
+    SERVICE_NOTIFICATION("Service menu")
 }

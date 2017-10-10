@@ -1,6 +1,5 @@
 package com.temabit.vskapoushchenko.routeapp
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
@@ -11,7 +10,6 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
@@ -26,14 +24,13 @@ import com.mapbox.mapboxsdk.camera.CameraPosition
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.maps.MapView
 import com.mapbox.mapboxsdk.maps.MapboxMap
-import com.temabit.vskapoushchenko.routeapp.adapters.MyContextWrapper
 import com.temabit.vskapoushchenko.routeapp.entities.RouteEntity
 import retrofit.Response
 import java.io.IOException
-import java.util.*
 
 class MapActivity : AppCompatActivity(),
                     NavigationView.OnNavigationItemSelectedListener{
+
     private var mapView: MapView? = null
     private var mapboxMap: MapboxMap? = null
     private lateinit var listOfRoutes: List<RouteEntity>
@@ -54,7 +51,7 @@ class MapActivity : AppCompatActivity(),
 
         Mapbox.getInstance(this, getString(R.string.access_token))
         setContentView(R.layout.activity_map)
-        initializeRecources()
+        initializeResources()
 
         //initializing action bar
         toolbar.title = resources.getString(R.string.title_activity_map)
@@ -81,11 +78,10 @@ class MapActivity : AppCompatActivity(),
         }
 
 
-        // Add a MapboxMap
+        // Adding the MapboxMap
         mapView!!.getMapAsync { mapboxMap ->
             this.mapboxMap = mapboxMap
 
-            //Centre camera
             mapboxMap.cameraPosition = CameraPosition.Builder()
                     .target(LatLng(50.27, 30.31))
                     .zoom(4.0)
@@ -103,7 +99,7 @@ class MapActivity : AppCompatActivity(),
         }
     }
 
-    private fun initializeRecources(){
+    private fun initializeResources(){
         toolbar = findViewById(R.id.toolbar) as Toolbar
         drawerLayout = findViewById(R.id.drawer_layout) as DrawerLayout
         navigationView = findViewById(R.id.nav_view) as NavigationView
@@ -120,7 +116,7 @@ class MapActivity : AppCompatActivity(),
                 .setProfile(DirectionsCriteria.PROFILE_DRIVING)
                 .build()
 
-        // Execute the request
+        // Executing the request
         var response: Response<DirectionsResponse>? = null
         try {
             response = client.execute()
@@ -154,7 +150,7 @@ class MapActivity : AppCompatActivity(),
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.notification, menu)
+        menuInflater.inflate(R.menu.menu, menu)
         return true
     }
 

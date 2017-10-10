@@ -26,7 +26,10 @@
             android:name=".MapActivity"
             android:label="@string/title_activity_map"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RoutesActivity" />
+        <activity
+            android:name=".RoutesActivity"
+            android:label="@string/title_activity_routes"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

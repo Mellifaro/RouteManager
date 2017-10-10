@@ -27,6 +27,7 @@
     </string-array>
     <string name="title_activity_notification">Notifications</string>
     <string name="title_activity_map">Maps</string>
+    <string name="title_activity_routes">Routes</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
