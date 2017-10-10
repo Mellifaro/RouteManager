@@ -1,5 +1,17 @@
 <resources>
     <string name="choose_language">Виберіть мову</string>
+    <string name="title_activity_notification">Повідомлення</string>
+    <string name="title_activity_map">Карти</string>
+    <string name="importt">Імпорт</string>
+    <string name="gallery">Галерея</string>
+    <string name="slideshow">Показ слайдів</string>
+    <string name="tools">Інструменти</string>
+    <string name="share">Поділитись</string>
+    <string name="send">Надіслати</string>
+    <string name="communicate">Спілкування</string>
+    <string name="action_settings">Налаштування</string>
+
+
     <string-array name="language_list">
         <item>Англійська</item>
         <item>Російська</item>
@@ -7,8 +19,9 @@
     </string-array>
     <string name="button_forward">Увійти</string>
     <string-array name="menu_list">
-        <item>Створити повідомлення</item>
-        <item>Видалити всі</item>
-        <item>Вихід</item>
+        <item>Галерея</item>
+        <item>Всі маршрути</item>
+        <item>Відправити</item>
+        <item>Допомога</item>
     </string-array>
 </resources>

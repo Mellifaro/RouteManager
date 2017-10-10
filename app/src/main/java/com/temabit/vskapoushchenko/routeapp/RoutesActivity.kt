@@ -1,5 +1,6 @@
 package com.temabit.vskapoushchenko.routeapp
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -10,16 +11,21 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.MotionEvent
 import com.mapbox.mapboxsdk.geometry.LatLng
+import com.temabit.vskapoushchenko.routeapp.adapters.MyContextWrapper
 import com.temabit.vskapoushchenko.routeapp.adapters.NotificationAdapter
 import com.temabit.vskapoushchenko.routeapp.adapters.RouteAdapter
 import com.temabit.vskapoushchenko.routeapp.entities.RouteEntity
+import java.util.*
 
 class RoutesActivity : AppCompatActivity() {
     private var listOfRoutes: List<RouteEntity> = initializeRoutes()
+    private val PREF_NAME = "com.temabit.vskapoushchenko.routeapp"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_routes)
+
+
 
         val recyclerView = findViewById(R.id.route_recycler_view) as RecyclerView
         val adapter = RouteAdapter(listOfRoutes)
@@ -63,5 +69,14 @@ class RoutesActivity : AppCompatActivity() {
                 RouteEntity("Трасса 3", listOf(LatLng(46.8002, 24.1982),
                         LatLng(54.4263, 35.4548),
                         LatLng(50.4978, 37.4370))))
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        Log.i("info", "Notification Activity onattachBaseCo()***************")
+        val localePrefs = newBase.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        val locale = localePrefs.getString("locale", "en")
+
+        val context = MyContextWrapper.wrap(newBase, Locale(locale))
+        super.attachBaseContext(context)
     }
 }

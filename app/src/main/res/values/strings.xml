@@ -2,18 +2,34 @@
     <string name="app_name">Route Manager</string>
     <string name="choose_language">Choose language</string>
     <string name="access_token">pk.eyJ1Ijoic2luaWlkcm96ZCIsImEiOiJjajc3YzcxeGUxaThiMzNsM3N6MjUyeDVqIn0.V6ygtiozuoYF5s0EHZb39w</string>
+    <string name="spinner_lang_prompt">Languages</string>
+    <string name="button_forward">Go forward</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="importt">Import</string>
+    <string name="gallery">Gallery</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="tools">Tools</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="communicate">Communicate</string>
+
     <string-array name="language_list">
         <item>English</item>
         <item>Russian</item>
         <item>Ukrainian</item>
     </string-array>
-    <string name="spinner_lang_prompt">Languages</string>
-    <string name="button_forward">Go forward</string>
     <string-array name="menu_list">
-        <item>Create notification</item>
-        <item>Delete all</item>
-        <item>Exit</item>
+        <item>Gallery</item>
+        <item>All Routes</item>
+        <item>Send</item>
+        <item>Info</item>
     </string-array>
-    <string name="common_yes">Yes</string>
-    <string name="common_no">No</string>
+    <string name="title_activity_notification">Notifications</string>
+    <string name="title_activity_map">Maps</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

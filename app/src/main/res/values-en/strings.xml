@@ -1,16 +1,29 @@
 <resources>
     <string name="app_name">Route Manager</string>
     <string name="choose_language">Choose language</string>
+    <string name="importt">Import</string>
+    <string name="gallery">Gallery</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="tools">Tools</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="communicate">Communicate</string>
+
+
     <string-array name="language_list">
         <item>English</item>
         <item>Russian</item>
         <item>Ukrainian</item>
     </string-array>
+    <string-array name="menu_list">
+        <item>Gallery</item>
+        <item>All Routes</item>
+        <item>Send</item>
+        <item>Info</item>
+    </string-array>
     <string name="spinner_lang_prompt">Languages</string>
     <string name="button_forward">Go forward</string>
-    <string-array name="menu_list">
-        <item>Create notification</item>
-        <item>Delete all</item>
-        <item>Exit</item>
-    </string-array>
+    <string name="title_activity_notification">Notifications</string>
+    <string name="title_activity_map">Maps</string>
+    <string name="action_settings">Settings</string>
 </resources>
